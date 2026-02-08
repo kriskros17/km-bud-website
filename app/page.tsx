@@ -61,14 +61,13 @@ export default function Home() {
     setCurrentImageIndex(index);
   };
 
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    id: string,
-  ) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLElement>, id: string) => {
     e.preventDefault();
-    const element = document.querySelector(id);
+    const targetId = id.replace("#", "");
+    const element = document.getElementById(targetId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const y = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
