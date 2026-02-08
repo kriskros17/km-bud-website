@@ -43,7 +43,7 @@ function AnimatedCounter({
     return () => unsubscribe();
   }, [springValue, suffix]);
 
-  return <div ref={ref} />;
+  return <div ref={ref} className="min-h-[1.2em]" />;
 }
 
 export default function Stats() {

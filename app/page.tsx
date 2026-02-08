@@ -11,23 +11,12 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import Services from "@/components/Services";
 import About from "@/components/About";
-
-// Dynamic imports for heavy components to reduce initial bundle
-const Gallery = dynamic(() => import("@/components/Gallery"), {
-  loading: () => <div className="py-32 bg-white" />,
-});
-const Stats = dynamic(() => import("@/components/Stats"), {
-  loading: () => <div className="py-24 bg-zinc-900" />,
-});
-const Process = dynamic(() => import("@/components/Process"), {
-  loading: () => <div className="py-24 bg-white" />,
-});
-const Footer = dynamic(() => import("@/components/Footer"), {
-  loading: () => <div className="bg-black py-12" />,
-});
+import Gallery from "@/components/Gallery";
+import Stats from "@/components/Stats";
+import Process from "@/components/Process";
+import Footer from "@/components/Footer";
 
 const heroImages = [
   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
@@ -66,7 +55,9 @@ export default function Home() {
     const targetId = id.replace("#", "");
     const element = document.getElementById(targetId);
     if (element) {
-      const y = element.getBoundingClientRect().top + window.scrollY;
+      // Add offset only for mobile devices to scroll deeper into the section
+      const offset = window.innerWidth < 768 ? 10 : 0;
+      const y = element.getBoundingClientRect().top + window.scrollY + offset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
@@ -115,7 +106,7 @@ export default function Home() {
               <span className="text-2xl font-bold tracking-wider">KM-BUD</span>
             </div>
 
-            {/* Links */}
+            {/* Desktop Links */}
             <div className="hidden md:flex items-center gap-10">
               <a
                 href="#home"
@@ -150,14 +141,6 @@ export default function Home() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
               </a>
             </div>
-
-            {/* Search Button */}
-            <button
-              aria-label="Szukaj"
-              className="flex items-center justify-center w-12 h-12 border border-white/20 rounded-lg text-white hover:bg-yellow-600 hover:border-yellow-600 transition-all duration-300 group"
-            >
-              <Search className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-            </button>
           </div>
         </nav>
 

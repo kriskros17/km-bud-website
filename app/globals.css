@@ -34,10 +34,6 @@ html {
 }
 
 /* Performance optimizations */
-section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 500px;
-}
 
 /* GPU acceleration for animations */
 .group:hover img,
