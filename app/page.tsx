@@ -76,6 +76,7 @@ export default function Home() {
     <main className="font-sans">
       {/* HERO SECTION */}
       <section
+        id="home"
         className="relative h-screen w-full overflow-hidden bg-black"
         suppressHydrationWarning
       >
@@ -117,13 +118,14 @@ export default function Home() {
 
             {/* Links */}
             <div className="hidden md:flex items-center gap-10">
-              <Link
-                href="/"
+              <a
+                href="#home"
+                onClick={(e) => scrollToSection(e, "#home")}
                 className="group relative text-base font-medium text-white/90 hover:text-white transition-colors duration-300"
               >
                 Strona główna
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
-              </Link>
+              </a>
               <a
                 href="#about"
                 onClick={(e) => scrollToSection(e, "#about")}

@@ -14,6 +14,17 @@ import {
 import Link from "next/link";
 
 export default function Footer() {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       {/* Contact Section */}
@@ -248,12 +259,13 @@ export default function Footer() {
               <h3 className="text-lg font-bold mb-6">Szybkie linki</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link
-                    href="/"
-                    className="text-gray-400 hover:text-yellow-600 transition-colors"
+                  <a
+                    href="/#home"
+                    onClick={(e) => scrollToSection(e, "#home")}
+                    className="text-gray-400 hover:text-yellow-600 transition-colors cursor-pointer"
                   >
                     Strona główna
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link
