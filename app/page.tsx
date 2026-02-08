@@ -175,16 +175,16 @@ export default function Home() {
               Twoją wizję w rzeczywistość, dbając o każdy detal.
             </p>
 
-            <a
-              href="#gallery"
-              onClick={(e) => scrollToSection(e, "#gallery")}
-              className="animate-fade-in-up-delay-2 group flex w-fit items-center gap-3 bg-yellow-700 hover:bg-yellow-600 text-white font-medium px-8 py-4 transition-all hover:pr-10 cursor-pointer"
+            <button
+              onClick={(e) => scrollToSection(e as any, "#gallery")}
+              className="animate-fade-in-up-delay-2 group flex w-fit items-center gap-3 bg-yellow-700 hover:bg-yellow-600 text-white font-medium px-8 py-4 transition-all hover:pr-10 cursor-pointer border-none"
+              type="button"
             >
               <span className="uppercase tracking-wider text-sm">
                 Zobacz nasze realizacje
               </span>
               <ArrowUpRight className="h-5 w-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
+            </button>
           </div>
         </div>
 
