@@ -122,7 +122,7 @@ export default function Process() {
                     {step.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  <p className="text-gray-600 text-sm leading-relaxed grow">
                     {step.description}
                   </p>
 

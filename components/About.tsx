@@ -59,7 +59,7 @@ export default function About() {
 
           {/* RIGHT COLUMN - IMAGE */}
           <div className="relative">
-            <div className="relative w-full aspect-[3/2]">
+            <div className="relative w-full aspect-3/2">
               <Image
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2574&auto=format&fit=crop"
                 alt="Modern Interior Design"

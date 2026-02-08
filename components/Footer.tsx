@@ -257,7 +257,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/#about"
                     className="text-gray-400 hover:text-yellow-600 transition-colors"
                   >
                     O nas
@@ -265,7 +265,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/#services"
                     className="text-gray-400 hover:text-yellow-600 transition-colors"
                   >
                     Usługi
@@ -273,7 +273,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/#gallery"
                     className="text-gray-400 hover:text-yellow-600 transition-colors"
                   >
                     Realizacje
@@ -281,7 +281,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/#contact"
                     className="text-gray-400 hover:text-yellow-600 transition-colors"
                   >
                     Kontakt

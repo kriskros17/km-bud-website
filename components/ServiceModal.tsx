@@ -81,7 +81,7 @@ export default function ServiceModal({
             className="fixed inset-4 md:inset-8 lg:inset-16 bg-white rounded-3xl shadow-2xl z-50 overflow-hidden flex flex-col"
           >
             {/* Header */}
-            <div className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white p-6 md:p-8">
+            <div className="relative bg-linear-to-r from-gray-900 to-gray-800 text-white p-6 md:p-8">
               <button
                 onClick={onClose}
                 aria-label="Zamknij modal"
@@ -183,7 +183,7 @@ export default function ServiceModal({
                   <div className="space-y-4">
                     {service.process.map((step, index) => (
                       <div key={index} className="flex gap-4">
-                        <div className="flex-shrink-0 w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white font-bold">
+                        <div className="shrink-0 w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white font-bold">
                           {index + 1}
                         </div>
                         <div className="flex-1">
